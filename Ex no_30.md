@@ -1,8 +1,7 @@
-# EX 30 C program to add two integer elements in an array using realloc() and that array already has three elements.
+# EX 30 C program to multiply two integer  numbers using pointers in which memory allocated using calloc(). 
 ## DATE:
 ## AIM:
-To write a C program to add two integer elements in an array using realloc() and that array already has three elements.
-
+To write a C program to multiply two integer  numbers using pointers in which memory allocated using calloc(). 
 ## Algorithm
  1. Start.
 2. Declare array size
@@ -16,30 +15,26 @@ To write a C program to add two integer elements in an array using realloc() and
 ```c
 #include <stdio.h>
 #include <stdlib.h>
+
 int main() {
- int *arr, size, i;
- size = 3;
- arr = (int *)malloc(size * sizeof(int)); 
- for (i = 0; i < size; i++) {
- arr[i] = i * 10; }
- printf("Original array:\n");
- for (i = 0; i < size; i++) {
- printf("%d ", arr[i]);
- }
- printf("\n");
- size *= 2;
- arr = (int *)realloc(arr, size * sizeof(int)); 
- for (i = size / 2; i < size; i++) {
- arr[i] = i * 10;
-printf("Updated array:\n");
- for (i = 0; i < size; i++) {
- printf("%d ", arr[i]);
- }
+    int *a, *b, *product;
+    a = (int *)calloc(1, sizeof(int));
+    b = (int *)calloc(1, sizeof(int));
+    product = (int *)calloc(1, sizeof(int));
+    scanf("%d", a);
+    scanf("%d", b);
+    *product = (*a) * (*b);
+    printf("The result is %d\n", *product);
+    free(a);
+    free(b);
+    free(product);
+    return 0;
 }
+
 ```
 ## Output:
 
-![image](https://github.com/user-attachments/assets/1b88c53d-e445-43bf-b1aa-e183f49e340e)
+<img width="1127" height="317" alt="image" src="https://github.com/user-attachments/assets/28097408-b984-4629-9441-53e1ff9d27f1" />
 
 
 ## Result:
