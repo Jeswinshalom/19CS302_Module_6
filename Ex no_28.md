@@ -1,9 +1,10 @@
-# EX 28 C program that demonstrates the use of enum (enumeration) type to define and use named integer constants.
+# EX 28 Create a C program to print 12 months in numbers using enumeration.
+
+enum year{Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec}; 
 ## DATE:
 ## AIM:
-To write a C program that demonstrates the use of enum (enumeration) type to define and use named integer constants.
-
-## Algorithm
+To write a C program to print 12 months in numbers using enumeration.
+ ## Algorithm
  1. Start.
 2. Declare enum type
 3. Declare all days in a week
@@ -13,20 +14,18 @@ To write a C program that demonstrates the use of enum (enumeration) type to def
 ## Program:
 ```c
 #include <stdio.h>
-enum weekdays {
- Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
-};
+enum year {Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec};
 int main() {
- enum weekdays today = Wednesday;
- if (today == Wednesday) {
- printf("Today is Wednesday.\n");
- }
+    enum year m;
+    for(m = Jan; m <= Dec; m++)
+        printf("%d ", m + 1);
+    return 0;
 }
 ```
 
 ## Output:
 
-![image](https://github.com/user-attachments/assets/cc81516f-6ccd-4c71-9d90-96f5671805c7)
+<img width="1131" height="156" alt="image" src="https://github.com/user-attachments/assets/1e4db1f5-40fc-41af-b35f-df1534da4781" />
 
 
 ## Result:
